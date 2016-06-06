@@ -40,6 +40,10 @@ public class MyBuilder
     {
         EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTarget.Android);
 
+        PlayerSettings.Android.keystorePass = "keystorePass";//キーストアのパスワード
+        PlayerSettings.Android.keyaliasName = "keyaliasName";//エイリアス名
+        PlayerSettings.Android.keyaliasPass = "keyaliasPass";//エイリアスパスワード
+
         CommonPlayerSettings ();
 
         string errorMessage = BuildPipeline.BuildPlayer (GetAllScene(), ANDROID_LOCATION_PATH_NAME, BuildTarget.Android, BuildOptions.None);
